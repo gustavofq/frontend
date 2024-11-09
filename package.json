@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "start": "live-server public",
+  "lint": "eslint src/*.js",
+  "format": "prettier --write src/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.14.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.3.3"
+  }
+}
