@@ -1,0 +1,9 @@
+#input_text{
+    display: grid;
+    gap: 15%;
+}
+
+#button_area{
+    display: grid;
+    gap: 15%;
+}
