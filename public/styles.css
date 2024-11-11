@@ -1,9 +1,114 @@
-#input_text{
-    display: grid;
-    gap: 15%;
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Altura completa de la pantalla */
+    background-color: #f4f4f4;  /* Fondo suave */
 }
 
-#button_area{
-    display: grid;
-    gap: 20%;
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área del login */
+#login_area {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;  /* Limita el tamaño máximo del login */
+    box-sizing: border-box;
+}
+
+/* Alinear inputs verticalmente */
+#input_text {
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    gap: 15px; /* Espaciado entre los campos */
+}
+
+/* Estilos de los inputs */
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Alinear links horizontalmente */
+#link_area {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los enlaces */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#link_area a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+#link_area a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#button_area {
+    text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;  /* Añadir espacio alrededor en pantallas pequeñas */
+    }
+
+    #card_area {
+        max-width: 100%;  /* Hacer el login más flexible en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    input {
+        font-size: 16px;  /* Aumentar el tamaño de los inputs en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 18px;  /* Botón más grande */
+    }
+
+    #input_text {
+        gap: 15px;  /* Mayor separación entre los elementos del formulario */
+    }
+
+    #link_area {
+        flex-direction: column;  /* Cambiar los links a columna en pantallas pequeñas */
+        gap: 5px;
+    }
 }
