@@ -15,14 +15,21 @@ function  login(){
     })
     .then(response => {
         if(!response.ok){
-            throw new Error('Network response was not ok');
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            notification.textContent = response;
         }
         return response.json();
     })
     .then(data =>{
-        console.log(data);
+        const accessToken = data.config.auth.access_token;
+        const refreshToken = data.config.auth.refresh_token;
+        localStorage.setItem("accessToken",accessToken);
+        localStorage.setItem("refreshToken",refreshToken);
+        window.location.href = "public/home.html";
     })
     .catch(error => {
         console.error('hubo un problema con la operación fetch',error);
+        document.getElementById("notification").innerText = error
     });
 }
