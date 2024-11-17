@@ -6,6 +6,7 @@ const headers ={
 }
 
 function  login(){
+    mostrarElemento()
     body.email = document.getElementById("user_input").value
     body.password = document.getElementById("password_input").value
     fetch(url,{
@@ -19,6 +20,7 @@ function  login(){
             notification.style.display = 'block';
             notification.textContent = response;
         }
+        ocultarElemento()
         return response.json();
     })
     .then(data =>{
@@ -27,9 +29,21 @@ function  login(){
         localStorage.setItem("accessToken",accessToken);
         localStorage.setItem("refreshToken",refreshToken);
         window.location.href = "public/home.html";
+        ocultarElemento()
     })
     .catch(error => {
         console.error('hubo un problema con la operación fetch',error);
         document.getElementById("notification").innerText = error
+        ocultarElemento()
     });
+
+    
 }
+
+function ocultarElemento() {
+    document.getElementById("loader").style.visibility="hidden";
+}
+
+  function mostrarElemento() {
+    document.getElementById("loader").style.visibility= "visible"
+  }
