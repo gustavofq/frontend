@@ -6,8 +6,9 @@ const headers = {
 
 export async function login(body){
     try{
-        url='${baseUrl}/user/login'
-        response = await fetch(url,{
+        console.log("inicio login")
+        const url='https://sea-lion-app-4gxod.ondigitalocean.app/users/login'
+        const response = await fetch(url,{
             method:'POST',
             headers: headers,
             body: JSON.stringify(body)
@@ -17,8 +18,7 @@ export async function login(body){
             throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
 
-        data = await response.json();
-
+        const data = await response.json();
         return data;
     }catch(error){
         console.error("error al hacer login.");

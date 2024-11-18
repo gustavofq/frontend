@@ -1,4 +1,4 @@
-import {initLogin} from './src/login.mjs';
+import {initLogin} from './src/login.js';
 
 window.initLogin = initLogin
 
@@ -44,10 +44,3 @@ function  login(){
     
 }
 
-function ocultarElemento() {
-    document.getElementById("loader").style.visibility="hidden";
-}
-
-  function mostrarElemento() {
-    document.getElementById("loader").style.visibility= "visible"
-  }
