@@ -1,4 +1,4 @@
-const url = "https://sea-lion-app-4gxod.ondigitalocean.app/users/login";
+
 const body = {}
 const headers ={
     'Content-Type': 'application/json',
@@ -13,7 +13,7 @@ function Register(){
         headers: headers,
         body: JSON.stringify(body)
     })
-    .then(response => {
+    .then(response => { 
         if(!response.ok){
             const notification = document.getElementById('notification');
             notification.style.display = 'block';

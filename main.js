@@ -1,3 +1,7 @@
+import {initLogin} from './src/login.mjs';
+
+window.initLogin = initLogin
+
 const url = "https://sea-lion-app-4gxod.ondigitalocean.app/users/login";
 const body = {}
 const headers ={

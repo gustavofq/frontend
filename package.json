@@ -8,6 +8,7 @@
   "format": "prettier --write src/*.js"
   },
   "keywords": [],
+  "type": "module",
   "author": "",
   "license": "ISC",
   "description": "",

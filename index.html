@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <head>  
         <title>Turnos</title>
-        <link rel="stylesheet" href="public/styles.css">
-        <script src="src/main.js"></script>
+        <link rel="stylesheet" href="pages/styles.css">
     </head>
     <body>
         <main>
@@ -19,15 +18,15 @@
                     </label>
                     <label>
                         Contraseña
-                        <input id="password_input" name="password" placeholder="********" type="password"></input>
+                        <input id="password" name="password" placeholder="********" type="password" autocomplete="current-password" required></input>
                     </label>
                     <div id="link_area">
-                        <a href="public/forgot_password.html">Olvidé mi contraseña</a>
-                        <a href="public/registry.html">Registrarme</a>
+                        <a href="pages/forgot_password.html">Olvidé mi contraseña</a>
+                        <a href="pages/registry.html">Registrarme</a>
                     </div>
                     <div id="button_area">
-                        <button onclick="login()" id="login_button" name="login">Ingresar</button>
-                        
+                        <button onclick="initLogin()"  id="login_button" name="login">Ingresar</button>
+                        <script type="module"  src="main.js"></script>
                     </div>
                     <div id="notification" class="notification error" style="display: none;"></div>
                     </div>
@@ -35,5 +34,6 @@
                 </div>
             </div>
         </main>
+        
     </body>
 </html>
