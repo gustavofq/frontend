@@ -19,7 +19,6 @@ export async function initLogin(){
         hiddenSpinner()
         return response
     }catch(error){
-        //window.location.href = "pages/error_generic.html";
-        throw error;
+        window.location.href = "pages/error_generic.html";
     }
 }

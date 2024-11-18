@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-    <meta charset="UTF-8">
-    <head>  
+    <head>
+        <meta charset="UTF-8">  
         <title>Turnos</title>
         <link rel="stylesheet" href="pages/styles.css">
     </head>
@@ -14,7 +14,7 @@
                 <div id="input_text">
                     <label>
                         Email
-                        <input id="user" name="user" placeholder="your@email.com" type="email">
+                        <input id="user" name="user" placeholder="your@email.com" type="email" uired="true" required>
                     </label>
                     <label>
                         Contraseña
@@ -26,7 +26,6 @@
                     </div>
                     <div id="button_area">
                         <button onclick="initLogin()"  id="login_button" name="login">Ingresar</button>
-                        <script type="module"  src="main.js"></script>
                     </div>
                     <div id="notification" class="notification error" style="display: none;"></div>
                     </div>
@@ -34,6 +33,6 @@
                 </div>
             </div>
         </main>
-        
+        <script type="module"  src="main.js" defer></script>
     </body>
 </html>
