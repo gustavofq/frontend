@@ -1,5 +1,5 @@
 import {loginController} from './src/controller/loginController.js';
-import { Spinner,Notifier } from './src/controller/utils.js';
+import { Spinner, Notifier} from './src/controller/utils.js';
 
 
 document.addEventListener('DOMContentLoaded',() => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',() => {
         event.preventDefault(); 
     })
     
-    button.addEventListener('click', () => loginController({formLogin, spinner, button, notifierComponent}))
-    
+    button.addEventListener('click', () => 
+        loginController({formLogin, spinner, notifierComponent}))
 })
 

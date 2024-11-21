@@ -18,7 +18,7 @@
                     </label>
                     <label>
                         Contraseña
-                        <input id="password" name="password" placeholder="********" type="password" autocomplete="current-password" required></input>
+                        <input id="password" name="password" pattern='(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}'  type="password" autocomplete="current-password" required minlength="8"></input>
                     </label>
                     <div id="link_area">
                         <a href="pages/forgot_password.html">Olvidé mi contraseña</a>

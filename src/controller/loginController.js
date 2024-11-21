@@ -1,6 +1,6 @@
 import { loginService, ErrValidatingUser } from "../service/userService.js";
 
-export async function loginController({formLogin, spinner, button, notifierComponent}) {
+export async function loginController({formLogin, spinner, notifierComponent}) {
     spinner.setVisible(true);
 
     const form = new FormData(formLogin);
