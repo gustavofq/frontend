@@ -1,7 +1,6 @@
-import { loginService } from "../service/userService.js";
+import { loginService, ErrValidatingUser } from "../service/userService.js";
 
-
-export async function loginController({formLogin, spinner, button, notification}) {
+export async function loginController({formLogin, spinner, button, notifierComponent}) {
     spinner.setVisible(true);
 
     const form = new FormData(formLogin);
@@ -9,8 +8,7 @@ export async function loginController({formLogin, spinner, button, notification}
     const password = form.get("password");
 
     if (!email || !password){
-        notification.textContent = 'usuario y contraseña requeridos.';
-        notification.style.display= 'block';
+        notifierComponent.setMsg('usuario y contraseña requeridos.');
         spinner.setVisible(false);
         return 
     }
@@ -20,12 +18,10 @@ export async function loginController({formLogin, spinner, button, notification}
         window.location.href = "pages/home.html";
     } catch (error) {
         if (error === ErrValidatingUser){
-            notification.textContent = 'Usuario o contraseñas incorrectos';
-            notification.style.display = 'block'
+            notifierComponent.setMsg("Usuario o contraseñas incorrectos");
             return
         }
-        notification.textContent = 'Ah ocurrido un error inesperado.';
-        notification.style.display = 'block';  
+        notifierComponent.setMsg("Ah ocurrido un error inesperado.");
     } finally {
         spinner.setVisible(false);
     }

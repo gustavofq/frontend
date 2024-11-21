@@ -17,11 +17,11 @@ export async function login(body){
         })
 
         if (!response.ok){
-            if (response.status == 500){
+            if (response.status === 500){
                 throw ErrInternalServerError
             }
             
-            if (response.status == 400){
+            if (response.status === 400){
                 throw ErrBadRequest
             }
         }

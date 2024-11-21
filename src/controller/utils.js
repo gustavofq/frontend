@@ -11,3 +11,14 @@ export class Spinner{
         this.loader.style.visibility= "hidden";
     }
 }
+
+export class Notifier{
+    constructor(component){
+        this.component = component;
+    }
+
+    setMsg(msg){
+        this.component.textContent = msg;
+        this.component.style.display = 'block';  
+    }
+}
