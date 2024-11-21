@@ -1,4 +1,4 @@
-import { ErrBadRequest, login } from "../repository/userRepository.js";
+import { ErrBadRequest, register } from "../repository/userRepository.js";
 
 export const ErrValidatingUser = new Error('error_validating_user')
 
@@ -25,6 +25,23 @@ export async function loginService(email, password){
             throw ErrValidatingUser;
         }
         
+        throw error
+    }
+}
+
+export async function registerService(name, email, password){
+    try{
+        const data = {
+            name: name,
+            email: email,
+            password: password
+        }
+
+        const  response =  await register(data)
+        
+        return response
+    }catch(error){
+        console.error("error service register", error);  
         throw error
     }
 }

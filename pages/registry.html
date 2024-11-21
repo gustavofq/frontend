@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-    <meta charset="UTF-8">
-    <head>  
+    <head>
+        <meta charset="UTF-8">  
         <title>Turnos</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <main>
-           
-            <div id="card_area">
+            <div id="card_area"> 
                 <header>
-                    <h1>Registro</h1>
+                    <h1>Registrar</h1>
                 </header>
-                <div id="input_text">
+                <form id="form_register" method="post">
                     <label>
-                        Nombre
-                        <input id="user_input" name="user" placeholder="juan", type="text">
+                        nombre
+                        <input id="name" name="name" type="text" uired="true" required>
                     </label>
                     <label>
                         Email
-                        <input id="user_input" name="user" placeholder="your@email.com", type="email">
+                        <input id="user" name="user" placeholder="your@email.com" type="email" uired="true" required>
                     </label>
                     <label>
                         Contraseña
-                        <input id="password_input" name="password" placeholder="********" type="password"></input>
+                        <input id="password" name="password" pattern='(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}'  type="password" autocomplete="current-password" required minlength="8"></input>
+                    </label>
+                    <label>
+                        Repetir Contraseña
+                        <input id="password2" name="password" pattern='(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}'  type="password" autocomplete="current-password" required minlength="8"></input>
                     </label>
                     <div id="button_area">
-                        <button onclick="Register()" id="login_button" name="register">Registrar</button>
+                        <button type="submit"  id="button_register" name="button">Ingresar</button>
                     </div>
                     <div id="notification" class="notification error" style="display: none;"></div>
-                </div>
+                    </div>
+                    <div id="loader" class="loader"></div>
+                </form>
             </div>
         </main>
+        <script type="module"  src="../main.js" defer></script>
     </body>
+</html>
 </html>

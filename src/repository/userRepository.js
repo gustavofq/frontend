@@ -34,3 +34,32 @@ export async function login(body){
         throw error;
     } 
 }
+
+export async function register(body){
+    try{
+        const url='https://sea-lion-app-4gxod.ondigitalocean.app/users/register'
+
+        const response = await fetch(url,{
+            method:'POST',
+            headers: headers,
+            body: JSON.stringify(body)
+        })
+
+        if (!response.ok){
+            if (response.status === 500){
+                throw ErrInternalServerError
+            }
+            
+            if (response.status === 400){
+                throw ErrBadRequest
+            }
+        }
+
+        const data = await response.json();
+
+        return data;
+    }catch(error){
+        console.error('fetch register', error)
+        throw error;
+    } 
+}
