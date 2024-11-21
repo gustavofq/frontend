@@ -11,7 +11,7 @@
                 <header>
                     <h1>Login</h1>
                 </header>
-                <div id="input_text">
+                <form id="login_form" method="post">
                     <label>
                         Email
                         <input id="user" name="user" placeholder="your@email.com" type="email" uired="true" required>
@@ -25,12 +25,12 @@
                         <a href="pages/registry.html">Registrarme</a>
                     </div>
                     <div id="button_area">
-                        <button onclick="initLogin()"  id="login_button" name="login">Ingresar</button>
+                        <button type="submit"  id="button" name="button">Ingresar</button>
                     </div>
                     <div id="notification" class="notification error" style="display: none;"></div>
                     </div>
                     <div id="loader" class="loader"></div>
-                </div>
+                </form>
             </div>
         </main>
         <script type="module"  src="main.js" defer></script>
