@@ -3,7 +3,7 @@ import { registerService, ErrValidatingUser } from "../service/userService.js";
 export async function registerController({formRegister, spinner, notifierComponent}) {
     spinner.setVisible(true);
 
-    const form = new FormData(formLogin);
+    const form = new FormData(formRegister);
     const name = form.get('name')
     const email = form.get('user');
     const password = form.get('password');
@@ -16,7 +16,7 @@ export async function registerController({formRegister, spinner, notifierCompone
 
     try {
         const response = await registerService(name, email, password);
-        window.location.href = 'pages/register_success.html';
+        window.location.href = '/pages/register_success.html';
     } catch (error) {
         if (error === ErrValidatingUser){
             notifierComponent.setMsg('Usuario o contraseñas incorrectos');
