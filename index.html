@@ -1,38 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Turnos</title>
         <link rel="stylesheet" href="pages/styles.css">
     </head>
     <body>
-        <main>
-            <div id="card_area"> 
-                <header>
-                    <h1>Login</h1>
-                </header>
-                <form id="login_form" method="post">
-                    <label>
-                        Email
-                        <input id="user" name="user" placeholder="your@email.com" type="email" uired="true" required>
-                    </label>
-                    <label>
-                        Contraseña
-                        <input id="password" name="password" pattern='(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}'  type="password" autocomplete="current-password" required minlength="8"></input>
-                    </label>
-                    <div id="link_area">
-                        <a href="pages/forgot_password.html">Olvidé mi contraseña</a>
-                        <a href="pages/registry.html">Registrarme</a>
-                    </div>
-                    <div id="button_area">
-                        <button type="submit"  id="button" name="button">Ingresar</button>
-                    </div>
-                    <div id="notification" class="notification error" style="display: none;"></div>
-                    </div>
-                    <div id="loader" class="loader"></div>
-                </form>
+        <header>
+            <h1>Turnos</h1>
+            <div class="container">
+                <ul>
+                    <li>
+                        
+                    </li>
+                </ul>
             </div>
-        </main>
-        <script type="module"  src="src/main/initLogin.js" defer></script>
+        </header>
+        
+
     </body>
 </html>
